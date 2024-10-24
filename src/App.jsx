@@ -9,17 +9,34 @@ function App() {
     status: "cart",
   });
 
-  const handleIsActiveState = (status) => {
-    status === "cart"? setIsActive({status: "cart"}):setIsActive({status: "about"})
+  const [selectedProducts, setSelectedProducts] = useState([]);
+
+  const handleSelectedProducts = (product) => {
+    const isExist = selectedProducts.find((p) => p.id === product.id);
+    if (isExist) {
+      alert("Product Already Added..!!");
+    } else {
+      setSelectedProducts([...selectedProducts, product]);
+    }
   };
 
+  const handleIsActiveState = (status) => {
+    status === "cart"
+      ? setIsActive({ status: "cart" })
+      : setIsActive({ status: "about" });
+  };
 
   return (
     <>
       <Navbar></Navbar>
       <div className="flex justify-around">
-        <AllProducts></AllProducts>
-        <CartContainer isActive={isActive} handleIsActiveState={handleIsActiveState}></CartContainer>
+        <AllProducts
+          handleSelectedProducts={handleSelectedProducts}
+        ></AllProducts>
+        <CartContainer
+          isActive={isActive}
+          handleIsActiveState={handleIsActiveState}
+        ></CartContainer>
       </div>
     </>
   );
