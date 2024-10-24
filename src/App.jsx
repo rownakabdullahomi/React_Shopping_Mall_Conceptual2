@@ -18,9 +18,9 @@ function App() {
   return (
     <>
       <Navbar></Navbar>
-      <div className="flex justify-between">
+      <div className="flex justify-around">
         <AllProducts></AllProducts>
-        <CartContainer handleIsActiveState={handleIsActiveState}></CartContainer>
+        <CartContainer isActive={isActive} handleIsActiveState={handleIsActiveState}></CartContainer>
       </div>
     </>
   );

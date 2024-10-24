@@ -8,6 +8,9 @@ padding: 0px 60px;
 .justify-between{
   justify-content: space-between;
 }
+.justify-around{
+  justify-content: space-around;
+}
 .nav-list{
   gap: 30px;
   list-style: none;
