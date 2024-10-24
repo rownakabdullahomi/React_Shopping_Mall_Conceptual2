@@ -1,0 +1,30 @@
+body{
+padding: 0px 60px;
+}
+
+.flex{
+  display: flex;
+}
+.justify-between{
+  justify-content: space-between;
+}
+.nav-list{
+  gap: 30px;
+  list-style: none;
+  justify-content: end;
+}
+
+.nav-list li{
+  font-size: x-large;
+  font-weight: bold;
+}
+.active{
+  background-color: blue;
+  color: white;
+}
+.btn{
+  padding: 15px 30px;
+  border: 2px solid gray;
+  border-radius: 10px;
+  cursor: pointer;
+}
