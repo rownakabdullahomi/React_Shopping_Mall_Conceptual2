@@ -31,3 +31,16 @@ padding: 0px 60px;
   border-radius: 10px;
   cursor: pointer;
 }
+
+.card{
+  width: 300px;
+  border: 2px solid gray;
+  border-radius: 15px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+}
+.img{
+  width: 100%;
+  border-radius: 15px;
+}

@@ -13,7 +13,6 @@ function App() {
     status === "cart"? setIsActive({status: "cart"}):setIsActive({status: "about"})
   };
 
-  console.log(isActive);
 
   return (
     <>

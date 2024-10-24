@@ -21,10 +21,7 @@ const CartContainer = ({ handleIsActiveState, isActive }) => {
         </div>
       </div>
 
-      {
-        isActive.status === "cart" ? <Cart></Cart> : <About></About>
-      }
-
+      {isActive.status === "cart" ? <Cart></Cart> : <About></About>}
     </div>
   );
 };
