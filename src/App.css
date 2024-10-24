@@ -4,7 +4,14 @@ padding: 0px 60px;
 
 .flex{
   display: flex;
+  gap: 5px;
 }
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .justify-between{
   justify-content: space-between;
 }
@@ -43,4 +50,22 @@ padding: 0px 60px;
 .img{
   width: 100%;
   border-radius: 15px;
+}
+
+.selected-img{
+  width: 70px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.selected-cart{
+  margin-top: 20px;
+  border-radius: 15px;
+}
+.cart-delete-btn{
+  padding: 6px 10px;
+  border: 2px solid gray;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 10px;
 }

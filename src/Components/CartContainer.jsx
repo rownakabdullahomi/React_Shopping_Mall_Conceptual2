@@ -2,7 +2,12 @@ import About from "./About";
 import Cart from "./Cart";
 
 /* eslint-disable react/prop-types */
-const CartContainer = ({ handleIsActiveState, isActive }) => {
+const CartContainer = ({
+  handleIsActiveState,
+  isActive,
+  selectedProducts,
+  handleDeletedProduct,
+}) => {
   return (
     <div>
       <h1>Cart Container.jsx</h1>
@@ -21,7 +26,11 @@ const CartContainer = ({ handleIsActiveState, isActive }) => {
         </div>
       </div>
 
-      {isActive.status === "cart" ? <Cart></Cart> : <About></About>}
+      {isActive.status === "cart" ? (
+        <Cart selectedProducts={selectedProducts} handleDeletedProduct={handleDeletedProduct}></Cart>
+      ) : (
+        <About></About>
+      )}
     </div>
   );
 };

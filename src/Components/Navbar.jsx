@@ -1,13 +1,14 @@
+/* eslint-disable react/prop-types */
 
-const Navbar = () => {
+const Navbar = ({selectedProducts, price}) => {
     return (
         <div>
             <div>
                 <ul className="flex nav-list">
                     <li>Home</li>
                     <li>Product</li>
-                    <li>Cart 1</li>
-                    <li>$ 500</li>
+                    <li>Cart {selectedProducts.length}</li>
+                    <li>$ {price}</li>
                 </ul>
             </div>
         </div>
